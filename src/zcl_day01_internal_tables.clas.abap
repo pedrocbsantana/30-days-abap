@@ -26,6 +26,18 @@ METHOD if_oo_adt_classrun~main.
     APPEND VALUE #( customer_id = 3 name = 'Maria' city = 'Campinas' ) TO lt_customer.
 
     out->write( lt_customer ).
+
+    DATA ls_customer TYPE ty_customer.
+
+    READ TABLE lt_customer WITH KEY customer_id = 2 INTO ls_customer.
+    IF sy-subrc = 0.
+        out->write( ls_customer ).
+        ELSE.
+        out->write( 'Customer not found' ).
+        ENDIF.
+
+
+
 ENDMETHOD.
 
 
