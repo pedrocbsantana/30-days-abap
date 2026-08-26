@@ -1,73 +1,80 @@
 # 30 Days of ABAP
 
-A 30-day learning journey focused on strengthening my ABAP fundamentals and progressing toward modern SAP development.
+A hands-on learning journey focused on strengthening my SAP ABAP development skills through practical exercises, business scenarios, and continuous documentation.
 
-The goal of this repository is to document my progress through practical exercises, while building a stronger understanding of ABAP concepts used in real-world SAP development.
+The goal of this repository is not only to study ABAP syntax, but to progressively apply technical concepts to scenarios inspired by real SAP business processes.
 
-## About the challenge
+## Objectives
 
-For 30 days, I will study and practice different ABAP topics, starting with language fundamentals and gradually moving toward more advanced concepts such as Open SQL, Object-Oriented ABAP, CDS Views, OData, and modern SAP development.
+- Strengthen ABAP fundamentals
+- Develop modern ABAP programming skills
+- Practice Object-Oriented ABAP
+- Improve data modeling and data access skills
+- Understand common SAP integration concepts
+- Apply ABAP concepts to business-oriented scenarios
+- Progress toward SAP S/4HANA development
+- Document my technical evolution through practical code
 
-Each day includes practical exercises developed using Eclipse ADT.
+## Learning Roadmap
+
+The journey progresses from ABAP fundamentals to topics commonly found in SAP development environments.
+
+Some of the topics covered throughout the project include:
+
+- ABAP Syntax and Data Types
+- Structures and Internal Tables
+- Control Flow and Loops
+- Open SQL
+- ABAP Dictionary
+- Debugging and Troubleshooting
+- Object-Oriented ABAP
+- ALV Reports
+- BAPIs and RFCs
+- Enhancements and BAdIs
+- IDocs and Integrations
+- CDS Views
+- SAP HANA
+- AMDP
+- OData
+- SAP S/4HANA concepts
+- Clean ABAP and Clean Core
 
 ## Progress
 
 | Day | Topic | Status |
 | --- | --- | --- |
-| 01 | Internal Tables | Completed |
-| 02 | Variables and Data Types | Completed |
-| 03 | Coming soon | - |
+| Day 01 | ABAP Fundamentals & Internal Tables | Completed |
+| Day 02 | Data Types, Structures & Conversions | Completed |
+| Day 03 | Control Flow & Business Rules — SD/MM Simulation | Completed |
+| Day 04 | Internal Tables — Advanced Concepts | Next |
+| Day 05 | Open SQL | Planned |
 
-## Topics covered
+More topics will be added as the journey progresses.
 
-### Day 01 — Internal Tables
+## Practical Business Scenarios
 
-- Internal table declaration
-- Structures
-- APPEND
-- READ TABLE
-- WITH KEY
-- SY-SUBRC
-- Working with table rows
+Besides isolated exercises, the repository includes simulations inspired by SAP business processes.
 
-### Day 02 — Variables and Data Types
+### Day 03 — Sales Order Validation (SD/MM)
 
-- DATA
-- Elementary data types
-- CONSTANTS
-- TYPES
-- Structures
-- TYPE vs LIKE
-- Type conversion
-- Inline declarations
-- String templates
-- System fields
+A simplified sales order validation scenario combining concepts inspired by:
 
-## Environment
+- SAP SD — sales order and customer validation
+- SAP MM — stock availability
 
-- SAP ABAP
-- Eclipse ADT
-- abapGit
-- GitHub
+The program evaluates customer blocking, requested quantity, available stock and order value to determine whether an order should be approved, remain pending, be blocked or require manual review.
 
-## Repository structure
+[Read the Day 03 documentation](docs/day-03.md)
 
-The exercises are organized as ABAP classes following the challenge progression.
+> These exercises are educational simulations designed to practice ABAP development and do not represent complete SAP standard processes.
 
-Examples:
+## Repository Structure
 
-`ZCL_DAY01_INTERNAL_TABLES`
-
-`ZCL_30DAYS_DAY02`
-
-As the challenge progresses, new exercises and concepts will be added to this repository.
-
-## Goals
-
-By the end of the 30 days, I aim to have a stronger foundation in ABAP, improve my problem-solving skills in SAP environments, and build a public record of my practical learning journey.
-
-## Author
-
-José Pedro
-
-Portfolio: pedrocbsantanadev.com.br
+```text
+30-days-abap/
+├── README.md
+├── docs/
+│   └── day-03.md
+└── src/
+    ├── ABAP source files
+    └── abapGit metadata
