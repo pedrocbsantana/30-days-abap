@@ -78,24 +78,32 @@ The program evaluates customer blocking, requested quantity, available stock and
 └── src/
     ├── ABAP source files
     └── abapGit metadata
+```
 
-    The /src directory contains ABAP objects synchronized through abapGit.
+The `/src` directory contains ABAP objects synchronized through abapGit.
 
-The /docs directory contains explanations, business scenarios and learning notes for selected exercises.
+The `/docs` directory contains explanations, business scenarios and learning notes for selected exercises.
 
-Technologies & Concepts
+## Technologies & Concepts
 
 SAP ABAP • ABAP OO • SAP S/4HANA • Open SQL • CDS Views • SAP HANA • AMDP • OData • abapGit
 
-Development Environment
-Eclipse ADT
-SAP ABAP Environment
-abapGit
-GitHub
-About This Project
+## Development Environment
+
+- Eclipse ADT
+- SAP ABAP Environment
+- abapGit
+- GitHub
+
+## About This Project
 
 This repository documents my continuous development as a SAP ABAP Developer.
 
 Each exercise is implemented, tested and documented as part of a structured learning process, with increasing focus on business-oriented scenarios and technologies used in modern SAP development.
 
+---
+
 Created by Pedro Santana
+
+
+    
