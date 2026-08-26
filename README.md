@@ -64,7 +64,7 @@ A simplified sales order validation scenario combining concepts inspired by:
 
 The program evaluates customer blocking, requested quantity, available stock and order value to determine whether an order should be approved, remain pending, be blocked or require manual review.
 
-[Read the Day 03 documentation](docs/day-03.md)
+[Read the Day 03 documentation](docs/day03.md)
 
 > These exercises are educational simulations designed to practice ABAP development and do not represent complete SAP standard processes.
 
