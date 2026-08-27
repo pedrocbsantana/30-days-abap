@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_DAY01_INTERNAL_TABLES</CLSNAME>
+    <CLSNAME>ZCL_30DAYS_DAY01</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>Classe 01</DESCRIPT>
     <STATE>1</STATE>
