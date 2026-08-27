@@ -1,109 +1,174 @@
 # 30 Days of ABAP
 
-A hands-on learning journey focused on strengthening my SAP ABAP development skills through practical exercises, business scenarios, and continuous documentation.
+A 30-day hands-on journey focused on strengthening my SAP ABAP development skills through progressive exercises, business-oriented scenarios, and technical documentation.
 
-The goal of this repository is not only to study ABAP syntax, but to progressively apply technical concepts to scenarios inspired by real SAP business processes.
+The goal of this repository is not only to practice ABAP syntax, but to gradually connect programming concepts with scenarios inspired by real SAP environments, especially SAP SD and MM.
 
-## Objectives
+Each day introduces new concepts while building a stronger foundation for future topics such as Open SQL, DDIC, ABAP Objects, CDS Views, AMDP, OData, and modern SAP development.
 
-- Strengthen ABAP fundamentals
-- Develop modern ABAP programming skills
-- Practice Object-Oriented ABAP
-- Improve data modeling and data access skills
-- Understand common SAP integration concepts
-- Apply ABAP concepts to business-oriented scenarios
-- Progress toward SAP S/4HANA development
-- Document my technical evolution through practical code
+> The business scenarios in this repository are educational simulations created for learning purposes. They do not represent complete SAP standard implementations.
 
-## Learning Roadmap
-
-The journey progresses from ABAP fundamentals to topics commonly found in SAP development environments.
-
-Some of the topics covered throughout the project include:
-
-- ABAP Syntax and Data Types
-- Structures and Internal Tables
-- Control Flow and Loops
-- Open SQL
-- ABAP Dictionary
-- Debugging and Troubleshooting
-- Object-Oriented ABAP
-- ALV Reports
-- BAPIs and RFCs
-- Enhancements and BAdIs
-- IDocs and Integrations
-- CDS Views
-- SAP HANA
-- AMDP
-- OData
-- SAP S/4HANA concepts
-- Clean ABAP and Clean Core
+---
 
 ## Progress
 
 | Day | Topic | Status |
-| --- | --- | --- |
-| Day 01 | ABAP Fundamentals & Internal Tables | Completed |
-| Day 02 | Data Types, Structures & Conversions | Completed |
-| Day 03 | Control Flow & Business Rules — SD/MM Simulation | Completed |
-| Day 04 | Internal Tables — Advanced Concepts | Next |
-| Day 05 | Open SQL | Planned |
+|---|---|---|
+| 01 | ABAP Structure and Syntax | Completed |
+| 02 | Structures and Internal Tables | Completed |
+| 03 | Control Flow and Business Rules | Completed |
+| 04 | Advanced Internal Tables | Completed |
+| 05 | Coming next | Pending |
+| 06 | Coming next | Pending |
+| 07 | Coming next | Pending |
 
-More topics will be added as the journey progresses.
+---
 
-## Practical Business Scenarios
+## Day 01 — ABAP Structure and Syntax
 
-Besides isolated exercises, the repository includes simulations inspired by SAP business processes.
+Introduction to the basic structure and syntax of an ABAP program.
 
-### Day 03 — Sales Order Validation (SD/MM)
+Topics practiced:
 
-A simplified sales order validation scenario combining concepts inspired by:
+- `REPORT`
+- `DATA`
+- Basic data types
+- `WRITE`
+- Operators
+- `IF / ELSE`
+- Comments
+- Basic program structure
 
-- SAP SD — sales order and customer validation
-- SAP MM — stock availability
+---
 
-The program evaluates customer blocking, requested quantity, available stock and order value to determine whether an order should be approved, remain pending, be blocked or require manual review.
+## Day 02 — Structures and Internal Tables
 
-[Read the Day 03 documentation](docs/day03.md)
+Introduction to structured data and Internal Tables.
 
-> These exercises are educational simulations designed to practice ABAP development and do not represent complete SAP standard processes.
+Topics practiced:
+
+- `TYPES`
+- Structures
+- Internal Tables
+- Work areas
+- `LOOP AT`
+- Reading and processing multiple records
+
+---
+
+## Day 03 — Control Flow and Business Rules
+
+Focused on controlling program execution and translating simple business rules into ABAP.
+
+Topics practiced:
+
+- `IF / ELSEIF / ELSE`
+- `AND / OR / NOT`
+- `CASE / WHEN`
+- `LOOP AT`
+- `WHERE`
+- `INTO`
+- `ASSIGNING FIELD-SYMBOL`
+- `DO`
+- `WHILE`
+- `sy-index`
+- String Templates
+- `abap_bool`
+
+The practical exercise introduced an educational SD/MM-inspired sales order validation scenario involving stock availability, blocked customers, order value, pending issues, and order status.
+
+[Read the Day 03 documentation](docs/day-03.md)
+
+---
+
+## Day 04 — Advanced Internal Tables
+
+Day 04 focused on choosing and manipulating different Internal Table types based on how the application needs to access its data.
+
+Topics practiced:
+
+- `STANDARD TABLE`
+- `SORTED TABLE`
+- `HASHED TABLE`
+- `UNIQUE KEY`
+- `NON-UNIQUE KEY`
+- `READ TABLE`
+- `APPEND`
+- `INSERT`
+- `MODIFY`
+- `DELETE`
+- `SORT`
+- Key vs. index access
+- `INTO` vs. `ASSIGNING FIELD-SYMBOL`
+- `sy-subrc`
+- Basic Internal Table performance considerations
+
+The practical exercise introduced an educational SAP MM-inspired inventory scenario using a `HASHED TABLE WITH UNIQUE KEY codigo`.
+
+The program loads materials, searches for a material by its unique code, updates stock through a Field Symbol, detects materials below minimum stock, calculates replenishment requirements, removes a discontinued material, and displays the resulting inventory.
+
+[Read the Day 04 documentation](docs/day-04.md)
+
+---
 
 ## Repository Structure
 
 ```text
 30-days-abap/
+│
 ├── README.md
 ├── docs/
-│   └── day-03.md
+│   ├── day-03.md
+│   └── day-04.md
+│
 └── src/
-    ├── ABAP source files
-    └── abapGit metadata
+    └── ABAP source files managed through abapGit
 ```
 
-The `/src` directory contains ABAP objects synchronized through abapGit.
+The `/src` directory contains ABAP objects serialized and managed by abapGit.
 
-The `/docs` directory contains explanations, business scenarios and learning notes for selected exercises.
-
-## Technologies & Concepts
-
-SAP ABAP • ABAP OO • SAP S/4HANA • Open SQL • CDS Views • SAP HANA • AMDP • OData • abapGit
-
-## Development Environment
-
-- Eclipse ADT
-- SAP ABAP Environment
-- abapGit
-- GitHub
-
-## About This Project
-
-This repository documents my continuous development as a SAP ABAP Developer.
-
-Each exercise is implemented, tested and documented as part of a structured learning process, with increasing focus on business-oriented scenarios and technologies used in modern SAP development.
+The `/docs` directory contains detailed notes about each study day, including concepts, exercises, business context, and lessons learned.
 
 ---
 
-Created by Pedro Santana
+## Learning Approach
 
+This project follows a hands-on learning approach:
 
-    
+1. Understand the concept.
+2. Reason about when and why it should be used.
+3. Write the ABAP code.
+4. Debug mistakes and understand their cause.
+5. Apply the concept to a business-oriented scenario.
+6. Document the result.
+
+The exercises become progressively more complex as new ABAP and SAP concepts are introduced.
+
+---
+
+## Roadmap
+
+The project will progressively explore topics such as:
+
+- Advanced Internal Tables
+- Open SQL
+- ABAP Dictionary (DDIC)
+- ABAP Objects
+- Exception Handling
+- Automated Tests
+- SAP HANA concepts
+- ABAP CDS
+- AMDP / SQLScript
+- OData
+- RAP
+- SAP S/4HANA development concepts
+
+The long-term goal is to evolve the exercises into more complete SAP-oriented projects connecting ABAP development with business scenarios involving SAP SD and MM.
+
+---
+
+## Disclaimer
+
+This repository documents my personal learning journey.
+
+The SAP SD/MM scenarios used throughout the project are simplified educational simulations designed to provide business context for ABAP exercises. They should not be interpreted as complete implementations of SAP standard processes.
