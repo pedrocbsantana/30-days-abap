@@ -15,12 +15,35 @@ Each day introduces new concepts while building a stronger foundation for future
 | Day | Topic | Status |
 |---|---|---|
 | 01 | ABAP Structure and Syntax | Completed |
-| 02 | Structures and Internal Tables | Completed |
-| 03 | Control Flow and Business Rules | Completed |
+| 02 | Variables and Data Types | Completed |
+| 03 | Conditions and Loops | Completed |
 | 04 | Advanced Internal Tables | Completed |
-| 05 | Coming next | Pending |
-| 06 | Coming next | Pending |
-| 07 | Coming next | Pending |
+| 05 | Open SQL and JOINs | Completed |
+| 06 | Modularization | Pending |
+| 07 | Review + Mini Project | Pending |
+| 08 | ABAP Objects: Classes and Objects | Pending |
+| 09 | ABAP Objects: Methods, Inheritance & Interfaces | Pending |
+| 10 | ABAP Dictionary (DDIC) | Pending |
+| 11 | Debugging and ST22 | Pending |
+| 12 | Exceptions and Error Handling | Pending |
+| 13 | BAPIs and Function Modules | Pending |
+| 14 | Review + Mini Project | Pending |
+| 15 | RFC and Integrations | Pending |
+| 16 | BAdIs and Enhancement Framework | Pending |
+| 17 | CDS Views: Fundamentals | Pending |
+| 18 | CDS Views: Associations and Queries | Pending |
+| 19 | SAP HANA and Code Pushdown | Pending |
+| 20 | AMDP | Pending |
+| 21 | Review + Mini Project | Pending |
+| 22 | OData and REST APIs | Pending |
+| 23 | SAP Integration Scenarios | Pending |
+| 24 | Clean Core and Extensibility | Pending |
+| 25 | SAP S/4HANA Fundamentals | Pending |
+| 26 | SD/MM Processes for ABAP Developers | Pending |
+| 27 | DEV, QAS, PRD and Transports | Pending |
+| 28 | Real Support Ticket Simulation | Pending |
+| 29 | Technical Interview Simulation | Pending |
+| 30 | Final ABAP Project | Pending |
 
 ---
 
@@ -111,6 +134,30 @@ The program loads materials, searches for a material by its unique code, updates
 
 ---
 
+## Day 05 — Open SQL and JOINs
+
+Day 05 focused on Open SQL, moving from simple queries to JOINs between tables.
+
+Topics practiced:
+
+- `WHERE` and filtering directly in the database
+- `COUNT`, `MAX`, `DISTINCT`, `GROUP BY`, and `HAVING`
+- `INNER JOIN` and `LEFT OUTER JOIN`
+- Conditions in `ON` vs. `WHERE`
+- `ORDER BY` and limiting results with `UP TO ... ROWS`
+- Selecting only the fields needed by the application
+- Range tables and `BETWEEN`
+
+In `zcl_30days_day05`, I practiced queries against `/DMO/AGENCY`: filtering agencies, counting records, finding the highest agency ID, grouping by country, and selecting distinct country codes. I also prepared a country range table; the final query uses `BETWEEN` to filter agency IDs.
+
+The final exercise, `zcl_30days_day05_ex001`, relates `/DMO/BOOKING` and `/DMO/CUSTOMER` with a `LEFT OUTER JOIN`. It keeps bookings even without a matching customer, filters flight prices above 500, sorts prices in descending order, and returns up to 20 rows containing only the selected booking and customer fields.
+
+The main takeaway was to understand where processing should happen and avoid transferring unnecessary data into the ABAP application.
+
+**Day 5 done. 25 to go.**
+
+---
+
 ## Repository Structure
 
 ```text
@@ -148,20 +195,11 @@ The exercises become progressively more complex as new ABAP and SAP concepts are
 
 ## Roadmap
 
-The project will progressively explore topics such as:
+The full 30-day sequence and completion status are listed in [Progress](#progress).
 
-- Advanced Internal Tables
-- Open SQL
-- ABAP Dictionary (DDIC)
-- ABAP Objects
-- Exception Handling
-- Automated Tests
-- SAP HANA concepts
-- ABAP CDS
-- AMDP / SQLScript
-- OData
-- RAP
-- SAP S/4HANA development concepts
+After the language fundamentals and Open SQL, the roadmap moves into modularization, ABAP Objects, DDIC, debugging, and error handling. Later days cover integrations, enhancements, CDS Views, SAP HANA, AMDP, OData, Clean Core, and SAP S/4HANA business context.
+
+Review and mini-project days are planned for Days 7, 14, and 21. The final stretch covers transports, support and interview simulations, and a final ABAP project on Day 30.
 
 The long-term goal is to evolve the exercises into more complete SAP-oriented projects connecting ABAP development with business scenarios involving SAP SD and MM.
 
